@@ -6,30 +6,26 @@ const MealDetails = ({ route }) => {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.mealSection}>
-        <Text style={styles.mealHeader}>Breakfast</Text>
-        <Text style={styles.mealContent}>{mealPlan.breakfast}</Text>
-      </View>
-      <View style={styles.mealSection}>
-        <Text style={styles.mealHeader}>Snack 1</Text>
-        <Text style={styles.mealContent}>{mealPlan.snack1}</Text>
-      </View>
-      <View style={styles.mealSection}>
-        <Text style={styles.mealHeader}>Lunch</Text>
-        <Text style={styles.mealContent}>{mealPlan.lunch}</Text>
-      </View>
-      <View style={styles.mealSection}>
-        <Text style={styles.mealHeader}>Snack 2</Text>
-        <Text style={styles.mealContent}>{mealPlan.snack2}</Text>
-      </View>
-      <View style={styles.mealSection}>
-        <Text style={styles.mealHeader}>Dinner</Text>
-        <Text style={styles.mealContent}>{mealPlan.dinner}</Text>
-      </View>
-      <View style={styles.mealSection}>
-        <Text style={styles.mealHeader}>Snack 3</Text>
-        <Text style={styles.mealContent}>{mealPlan.snack3}</Text>
-      </View>
+      {mealPlan.breakfast ? (
+        <View style={styles.mealSection}>
+          <Text style={styles.mealHeader}>Breakfast</Text>
+          <Text style={styles.mealContent}>{mealPlan.breakfast}</Text>
+        </View>
+      ) : null}
+
+      {mealPlan.lunch ? (
+        <View style={styles.mealSection}>
+          <Text style={styles.mealHeader}>Lunch</Text>
+          <Text style={styles.mealContent}>{mealPlan.lunch}</Text>
+        </View>
+      ) : null}
+
+      {mealPlan.dinner ? (
+        <View style={styles.mealSection}>
+          <Text style={styles.mealHeader}>Dinner</Text>
+          <Text style={styles.mealContent}>{mealPlan.dinner}</Text>
+        </View>
+      ) : null}
     </ScrollView>
   );
 };

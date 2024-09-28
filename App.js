@@ -7,7 +7,7 @@ import Questions from './components/Questions';
 import MealPlan from './components/MealPlan';
 import MealDetails from './components/MealDetails';
 import UserProfile from './components/UserProfile';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';  
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
